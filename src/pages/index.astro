@@ -31,7 +31,25 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- 2: О БРЕНДЕ -->
+  <!-- 2: СПИКЕР -->
+  <section class="slide">
+    <div class="slide-cols">
+      <div class="col-image" style="background-image:url('/images/speaker.png');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
+      <div class="col-text">
+        <div class="terminal-tag">// СПИКЕР</div>
+        <h2 class="pip-green">Илья Кадацкий</h2>
+        <p class="amber" style="font-size:1.2em;margin:.3rem 0 .8rem;">Руководитель e-commerce</p>
+        <ul class="bio-list">
+          <li class="pip-bullet">18 лет в&nbsp;диджитале</li>
+          <li class="pip-bullet">E-commerce, маркетинг, продукт</li>
+          <li class="pip-bullet">FINN&nbsp;FLARE — с&nbsp;2023</li>
+          <li class="pip-bullet">Строю новую платформу с&nbsp;нуля: 3&nbsp;человека + AI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3: О БРЕНДЕ -->
   <section class="slide">
     <div class="slide-cols">
       <div class="col-image" style="background-image:url('/images/starship.png')"></div>
@@ -74,6 +92,9 @@ import '../styles/global.css';
           <div class="pain-item"><span class="rust">▸</span> Поменять структуру каталога = близко к&nbsp;невозможному</div>
           <div class="pain-item"><span class="rust">▸</span> Монолит: одно изменение → каскадные баги</div>
           <div class="pain-item"><span class="rust">▸</span> Костыли в&nbsp;интеграциях: Битрикс&nbsp;↔&nbsp;1С&nbsp;↔&nbsp;Mindbox</div>
+          <div class="pain-item"><span class="rust">▸</span> Деградация поискового трафика</div>
+          <div class="pain-item"><span class="rust">▸</span> Данные клиентов разбросаны по&nbsp;разным системам</div>
+          <div class="pain-item"><span class="rust">▸</span> Низкая скорость блокирует новый трафик и&nbsp;конверсию</div>
         </div>
       </div>
     </div>
@@ -189,6 +210,21 @@ import '../styles/global.css';
             <div class="solution-arrow">→</div>
             <div class="solution-fix">Прямая интеграция с&nbsp;логистикой</div>
           </div>
+          <div class="solution-row">
+            <div class="solution-pain">Деградация SEO</div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-fix">Nuxt 3 SSR + техническое SEO с&nbsp;нуля</div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-pain">Данные разбросаны</div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-fix">CDP: единый профиль клиента</div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-pain">Низкая скорость</div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-fix">SSR + CDN + оптимизация Core Web Vitals</div>
+          </div>
         </div>
       </div>
     </div>
@@ -223,11 +259,13 @@ import '../styles/global.css';
             <span class="tool-tag amber-tag">Gemini</span>
           </div>
         </div>
-        <p class="dim" style="font-size:1em;margin-top:.3rem;">Что уже сделано с&nbsp;AI:</p>
+        <h3 class="amber" style="font-size:1.15em;margin-top:.5rem;text-shadow:0 0 12px rgba(255,180,0,.4);">Что уже сделано с&nbsp;AI:</h3>
         <ul class="bio-list" style="margin-top:.2rem;">
+          <li class="pip-bullet">Анализ текущих бизнес-процессов и&nbsp;инфраструктуры</li>
           <li class="pip-bullet">Проектная документация: charter, vision, спеки</li>
           <li class="pip-bullet">Ревью архитектуры БД — 9&nbsp;модулей, ~40&nbsp;таблиц, 3&nbsp;итерации</li>
           <li class="pip-bullet">SEO&#8209;стратегия + GEO&#8209;стратегия</li>
+          <li class="pip-bullet">Прототипы UI и&nbsp;презентации — генерация + вёрстка</li>
         </ul>
       </div>
       <div class="col-image" style="background-image:url('/images/ai_team.png')"></div>
