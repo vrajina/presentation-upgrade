@@ -171,24 +171,16 @@ p  { line-height: 1.5; font-size: 1.3em; margin: 0; }
   height: 100%;
 }
 .title-col-img {
-  flex: 1;
+  flex: 0 0 40%;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 .title-col-img::after {
-  content: '';
-  position: absolute; inset: 0;
-  pointer-events: none;
-}
-.title-col-img.left::after {
-  background: linear-gradient(to right, transparent 30%, var(--bg));
-}
-.title-col-img.right::after {
-  background: linear-gradient(to left, transparent 30%, var(--bg));
+  display: none;
 }
 .title-col-text {
-  flex: 1;
+  flex: 0 0 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
