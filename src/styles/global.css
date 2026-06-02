@@ -388,6 +388,16 @@ p  { line-height: 1.5; font-size: 1.3em; margin: 0; }
   font-size: .8em;
   letter-spacing: .2em;
 }
+.arch-tier-sat {
+  padding: .5rem 1.2rem;
+  border: 1px dashed rgba(255,180,0,.3);
+  background: rgba(255,180,0,.03);
+}
+.arch-tier-sat .arch-tier-blocks {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+}
 
 /* === SOLUTION MAPPING === */
 .solution-grid {
