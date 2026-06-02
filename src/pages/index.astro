@@ -79,52 +79,94 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- 4: СТРОИМ ЗВЕЗДОЛЁТ -->
+  <!-- 4: СТРОИМ ЗВЕЗДОЛЁТ — полная ширина -->
   <section class="slide">
-    <div class="slide-cols">
-      <div class="col-text">
+    <div class="arch-fullslide">
+      <div class="arch-header">
         <div class="terminal-tag">// АРХИТЕКТУРА</div>
-        <h2 class="pip-green">Строим<br>звездолёт</h2>
-        <p class="body-sm dim" style="margin:.4rem 0 .8rem;">Не&nbsp;латаем Запорожец. Проектируем с&nbsp;нуля.</p>
-        <div class="arch-grid">
-          <div class="arch-block">
-            <span class="arch-icon">📦</span>
-            <span class="arch-name">PIM & CMS</span>
-            <span class="arch-desc">Каталог, медиа, лендинги</span>
-          </div>
-          <div class="arch-block">
-            <span class="arch-icon">🏬</span>
-            <span class="arch-name">Inventory</span>
-            <span class="arch-desc">Остатки, резервы</span>
-          </div>
-          <div class="arch-block">
-            <span class="arch-icon">👤</span>
-            <span class="arch-name">Account</span>
-            <span class="arch-desc">ЛК, избранное, адреса</span>
-          </div>
-          <div class="arch-block satellite">
-            <span class="arch-icon">🛒</span>
-            <span class="arch-name">Cart & Checkout</span>
-            <span class="arch-desc">Корзина, оплата, доставка</span>
-          </div>
-          <div class="arch-block satellite">
-            <span class="arch-icon">🔐</span>
-            <span class="arch-name">IDP</span>
-            <span class="arch-desc">SberID, OTP, JWT</span>
-          </div>
-          <div class="arch-block">
-            <span class="arch-icon">🌐</span>
-            <span class="arch-name">Storefront</span>
-            <span class="arch-desc">Nuxt 3 SSR + BFF</span>
+        <h2 class="pip-green" style="font-size:1.8em;">Строим звездолёт</h2>
+        <p class="dim" style="font-size:1em;">Не&nbsp;латаем Запорожец. Проектируем с&nbsp;нуля.</p>
+      </div>
+
+      <div class="arch-diagram">
+        <!-- Tier: External / 1C -->
+        <div class="arch-tier">
+          <div class="arch-tier-label dim">Внешние системы</div>
+          <div class="arch-tier-blocks">
+            <div class="arch-node ext">1С ERP</div>
+            <div class="arch-node ext">Mindbox CRM</div>
+            <div class="arch-node ext">Доставка</div>
+            <div class="arch-node ext">Платёжные системы</div>
           </div>
         </div>
-        <p class="dim" style="margin-top:.6rem;font-size:.95em;font-family:'Share Tech Mono',monospace;">
-          <span class="pip-green">■</span> Модули монолита&nbsp;&nbsp;
-          <span class="amber">■</span> Сервисы&#8209;сателлиты&nbsp;&nbsp;
-          Laravel&nbsp;11 + Nuxt&nbsp;3 + PostgreSQL
-        </p>
+
+        <div class="arch-connector">
+          <span class="arch-arrow pip-green">▼ API ▼</span>
+        </div>
+
+        <!-- Tier: Laravel Monolith -->
+        <div class="arch-tier core">
+          <div class="arch-tier-label pip-green">Laravel 13 · Модульный монолит · PostgreSQL</div>
+          <div class="arch-tier-blocks">
+            <div class="arch-node core-mod">
+              <span class="arch-icon">📦</span>
+              <span class="arch-name">PIM</span>
+              <span class="arch-desc">Каталог, атрибуты,<br>медиа</span>
+            </div>
+            <div class="arch-node core-mod">
+              <span class="arch-icon">📝</span>
+              <span class="arch-name">CMS</span>
+              <span class="arch-desc">Лендинги, контент,<br>баннеры</span>
+            </div>
+            <div class="arch-node core-mod">
+              <span class="arch-icon">🏬</span>
+              <span class="arch-name">Inventory</span>
+              <span class="arch-desc">Остатки, резервы,<br>склады</span>
+            </div>
+            <div class="arch-node core-mod">
+              <span class="arch-icon">👤</span>
+              <span class="arch-name">Account</span>
+              <span class="arch-desc">ЛК, избранное,<br>адреса</span>
+            </div>
+            <div class="arch-node sat-mod">
+              <span class="arch-icon">🛒</span>
+              <span class="arch-name">Cart</span>
+              <span class="arch-desc">Корзина, оплата,<br>checkout</span>
+            </div>
+            <div class="arch-node sat-mod">
+              <span class="arch-icon">🔐</span>
+              <span class="arch-name">IDP</span>
+              <span class="arch-desc">SberID, OTP,<br>JWT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-connector">
+          <span class="arch-arrow pip-green">▼ BFF API ▼</span>
+        </div>
+
+        <!-- Tier: Frontend -->
+        <div class="arch-tier">
+          <div class="arch-tier-label amber">Клиенты</div>
+          <div class="arch-tier-blocks">
+            <div class="arch-node front">
+              <span class="arch-icon">🌐</span>
+              <span class="arch-name">Storefront</span>
+              <span class="arch-desc">Nuxt 3 SSR</span>
+            </div>
+            <div class="arch-node front">
+              <span class="arch-icon">📱</span>
+              <span class="arch-name">Mobile App</span>
+              <span class="arch-desc">iOS / Android</span>
+            </div>
+            <div class="arch-node front">
+              <span class="arch-icon">🏪</span>
+              <span class="arch-name">Консультант</span>
+              <span class="arch-desc">App для розницы</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-image" style="background-image:url('/images/architecture.png')"></div>
     </div>
   </section>
 

@@ -294,6 +294,101 @@ p  { line-height: 1.5; font-size: 1.3em; margin: 0; }
 .arch-block .arch-name { font-weight: 700; font-size: 1em; }
 .arch-block .arch-desc { font-size: .75em; color: var(--dim); margin-top: .15rem; font-family: 'Rajdhani'; text-shadow: none; }
 
+/* === ARCHITECTURE FULL-SLIDE DIAGRAM === */
+.arch-fullslide {
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+.arch-header {
+  text-align: center;
+  margin-bottom: .8rem;
+}
+.arch-diagram {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+.arch-tier {
+  padding: .7rem 1.2rem;
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+}
+.arch-tier.core {
+  border-color: rgba(0,255,65,.3);
+  background: rgba(0,255,65,.04);
+  padding: .8rem 1.2rem;
+}
+.arch-tier-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .85em;
+  margin-bottom: .5rem;
+  letter-spacing: .1em;
+}
+.arch-tier-blocks {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.arch-node {
+  padding: .5rem .8rem;
+  border: 1px solid var(--border);
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .85em;
+  min-width: 100px;
+  transition: all .2s ease;
+}
+.arch-node:hover {
+  transform: translateY(-2px);
+}
+.arch-node.ext {
+  color: var(--dim);
+  border-color: rgba(138,138,122,.3);
+  background: rgba(138,138,122,.04);
+}
+.arch-node.core-mod {
+  color: var(--pip-green);
+  text-shadow: var(--gg);
+  border-color: rgba(0,255,65,.25);
+  background: rgba(0,255,65,.06);
+}
+.arch-node.core-mod:hover {
+  background: rgba(0,255,65,.12);
+  box-shadow: 0 0 15px rgba(0,255,65,.15);
+}
+.arch-node.sat-mod {
+  color: var(--amber);
+  text-shadow: var(--ga);
+  border-color: rgba(255,180,0,.25);
+  background: rgba(255,180,0,.06);
+}
+.arch-node.sat-mod:hover {
+  background: rgba(255,180,0,.12);
+  box-shadow: 0 0 15px rgba(255,180,0,.15);
+}
+.arch-node.front {
+  color: var(--amber);
+  text-shadow: var(--ga);
+  border-color: rgba(255,180,0,.2);
+  background: rgba(255,180,0,.04);
+}
+.arch-node .arch-icon { font-size: 1.3em; display: block; margin-bottom: .1rem; }
+.arch-node .arch-name { font-weight: 700; font-size: 1em; display: block; }
+.arch-node .arch-desc { font-size: .7em; color: var(--dim); display: block; margin-top: .1rem; font-family: 'Rajdhani'; text-shadow: none; }
+
+.arch-connector {
+  text-align: center;
+  padding: .3rem 0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .8em;
+  letter-spacing: .2em;
+}
+
 /* === SOLUTION MAPPING === */
 .solution-grid {
   display: flex;
