@@ -1,0 +1,263 @@
+---
+import '../styles/global.css';
+---
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Хватит тюнинговать Запорожец — FINN FLARE</title>
+</head>
+<body>
+<div class="scanlines"></div>
+<div class="nav-progress"></div>
+
+<div class="slides-track">
+
+  <!-- 1: TITLE — 3 equal columns -->
+  <section class="slide">
+    <div class="title-3col">
+      <div class="title-col-img left" style="background-image:url('/images/zaporozhets.png')"></div>
+      <div class="title-col-text">
+        <div class="terminal-tag">// UPGRADE E-COM MEETUP</div>
+        <h1 class="title-glitch" style="font-size:2.8em;">ХВАТИТ<br>ТЮНИНГОВАТЬ<br>ЗАПОРОЖЕЦ</h1>
+        <p class="subtitle">Как&nbsp;мы строим звездолёт<br>компактной командой&nbsp;+&nbsp;AI</p>
+        <div class="author-block">
+          <span class="pip-green">Илья Кадацкий</span><br>
+          <span class="dim">Директор по&nbsp;электронной коммерции</span><br>
+          <span class="pip-green">FINN&nbsp;FLARE</span>
+        </div>
+      </div>
+      <div class="title-col-img right" style="background-image:url('/images/starship.png')"></div>
+    </div>
+  </section>
+
+  <!-- 2: О БРЕНДЕ -->
+  <section class="slide">
+    <div class="slide-cols">
+      <div class="col-image" style="background-image:url('/images/starship.png')"></div>
+      <div class="col-text">
+        <div class="terminal-tag">// О БРЕНДЕ</div>
+        <h2 class="pip-green">FINN&nbsp;FLARE</h2>
+        <div class="ff-info-grid">
+          <div class="ff-card">
+            <div class="ff-card-icon">🏔️</div>
+            60+ лет на&nbsp;рынке. Финский дух комфорта, надёжности и&nbsp;функциональности.
+          </div>
+          <div class="ff-card">
+            <div class="ff-card-icon">🏪</div>
+            70+ розничных магазинов в&nbsp;России и&nbsp;Казахстане.
+          </div>
+          <div class="ff-card">
+            <div class="ff-card-icon">📦</div>
+            Wildberries, Lamoda, Ozon, Yandex&nbsp;Market&nbsp;— все ключевые маркетплейсы.
+          </div>
+          <div class="ff-card">
+            <div class="ff-card-icon">📱</div>
+            Свой интернет-магазин, клиентское приложение и&nbsp;приложение консультантов для&nbsp;300&nbsp;продавцов розницы.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3: СТАЙЛИНГ ЗАПОРОЖЦА -->
+  <section class="slide">
+    <div class="slide-cols">
+      <div class="col-image" style="background-image:url('/images/zaporozhets.png')"></div>
+      <div class="col-text">
+        <div class="terminal-tag">// ДИАГНОСТИКА</div>
+        <h2 class="rust">«Стайлинг<br>Запорожца»</h2>
+        <p class="dim body-sm" style="margin:.6rem 0 0;font-style:italic;">Обвес сделать можно, но&nbsp;двигатель тот&nbsp;же.<br>И&nbsp;он&nbsp;может выплюнуться посреди дороги.</p>
+        <div class="pain-list" style="margin-top:.8rem;">
+          <div class="pain-item"><span class="rust">▸</span> 1С&#8209;Битрикс: не&nbsp;обновлялся с&nbsp;2020</div>
+          <div class="pain-item"><span class="rust">▸</span> Мерчандайзинг на&nbsp;ручном приводе: Figma&nbsp;→ текстовое поле в&nbsp;админке. Ни&nbsp;визуального редактора, ни&nbsp;глобальных правил</div>
+          <div class="pain-item"><span class="rust">▸</span> Поменять структуру каталога = близко к&nbsp;невозможному</div>
+          <div class="pain-item"><span class="rust">▸</span> Монолит: одно изменение → каскадные баги</div>
+          <div class="pain-item"><span class="rust">▸</span> Костыли в&nbsp;интеграциях: Битрикс&nbsp;↔&nbsp;1С&nbsp;↔&nbsp;Mindbox</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4: СТРОИМ ЗВЕЗДОЛЁТ -->
+  <section class="slide">
+    <div class="slide-cols">
+      <div class="col-text">
+        <div class="terminal-tag">// АРХИТЕКТУРА</div>
+        <h2 class="pip-green">Строим<br>звездолёт</h2>
+        <p class="body-sm dim" style="margin:.4rem 0 .8rem;">Не&nbsp;латаем Запорожец. Проектируем с&nbsp;нуля.</p>
+        <div class="arch-grid">
+          <div class="arch-block">
+            <span class="arch-icon">📦</span>
+            <span class="arch-name">PIM & CMS</span>
+            <span class="arch-desc">Каталог, медиа, лендинги</span>
+          </div>
+          <div class="arch-block">
+            <span class="arch-icon">🏬</span>
+            <span class="arch-name">Inventory</span>
+            <span class="arch-desc">Остатки, резервы</span>
+          </div>
+          <div class="arch-block">
+            <span class="arch-icon">👤</span>
+            <span class="arch-name">Account</span>
+            <span class="arch-desc">ЛК, избранное, адреса</span>
+          </div>
+          <div class="arch-block satellite">
+            <span class="arch-icon">🛒</span>
+            <span class="arch-name">Cart & Checkout</span>
+            <span class="arch-desc">Корзина, оплата, доставка</span>
+          </div>
+          <div class="arch-block satellite">
+            <span class="arch-icon">🔐</span>
+            <span class="arch-name">IDP</span>
+            <span class="arch-desc">SberID, OTP, JWT</span>
+          </div>
+          <div class="arch-block">
+            <span class="arch-icon">🌐</span>
+            <span class="arch-name">Storefront</span>
+            <span class="arch-desc">Nuxt 3 SSR + BFF</span>
+          </div>
+        </div>
+        <p class="dim" style="margin-top:.6rem;font-size:.95em;font-family:'Share Tech Mono',monospace;">
+          <span class="pip-green">■</span> Модули монолита&nbsp;&nbsp;
+          <span class="amber">■</span> Сервисы&#8209;сателлиты&nbsp;&nbsp;
+          Laravel&nbsp;11 + Nuxt&nbsp;3 + PostgreSQL
+        </p>
+      </div>
+      <div class="col-image" style="background-image:url('/images/architecture.png')"></div>
+    </div>
+  </section>
+
+  <!-- 5: БОЛЬ → РЕШЕНИЕ -->
+  <section class="slide">
+    <div class="slide-cols">
+      <div class="col-image" style="background-image:url('/images/transformation.png')"></div>
+      <div class="col-text" style="padding:3rem;">
+        <div class="terminal-tag">// ТРАНСФОРМАЦИЯ</div>
+        <h2 class="pip-green" style="font-size:1.7em;">Как звездолёт<br>решает боли</h2>
+        <div class="solution-grid">
+          <div class="solution-row">
+            <div class="solution-pain">Мерчандайзинг вручную</div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-fix">PIM: визуальный редактор + глобальные правила</div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-pain">Каталог нельзя изменить</div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-fix">Good → GoodCard → SKU: любые атрибуты</div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-pain">Костыли интеграций</div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-fix">API&#8209;first: единый BFF для&nbsp;web + app</div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-pain">Урезанный ассортимент</div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-fix">Все склады, все остатки, real-time</div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-pain">Слепота по&nbsp;доставке</div>
+            <div class="solution-arrow">→</div>
+            <div class="solution-fix">Прямая интеграция с&nbsp;логистикой</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6: СТАВКА НА AI -->
+  <section class="slide">
+    <div class="slide-cols">
+      <div class="col-text">
+        <div class="terminal-tag">// КОМАНДА</div>
+        <h2 class="pip-green">3&nbsp;человека<br>+&nbsp;AI&#8209;оркестр</h2>
+        <div class="team-stat">
+          <div class="team-stat-item">
+            <div class="team-stat-num rust">3</div>
+            <div class="team-stat-label">человека</div>
+          </div>
+          <div class="team-stat-item">
+            <div class="team-stat-num pip-green">∞</div>
+            <div class="team-stat-label">AI&#8209;агентов</div>
+          </div>
+          <div class="team-stat-item">
+            <div class="team-stat-num amber">0</div>
+            <div class="team-stat-label">тендеров</div>
+          </div>
+        </div>
+        <div class="tools-section" style="margin-top:1.2rem;">
+          <h3 class="amber" style="font-size:1.1em;">Инструменты</h3>
+          <div class="tools-grid">
+            <span class="tool-tag">Antigravity</span>
+            <span class="tool-tag">Cursor</span>
+            <span class="tool-tag amber-tag">Claude&nbsp;Opus</span>
+            <span class="tool-tag amber-tag">Gemini</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size:1em;margin-top:.3rem;">Что уже сделано с&nbsp;AI:</p>
+        <ul class="bio-list" style="margin-top:.2rem;">
+          <li class="pip-bullet">Проектная документация: charter, vision, спеки</li>
+          <li class="pip-bullet">Ревью архитектуры БД — 9&nbsp;модулей, ~40&nbsp;таблиц, 3&nbsp;итерации</li>
+          <li class="pip-bullet">SEO&#8209;стратегия + GEO&#8209;стратегия</li>
+        </ul>
+      </div>
+      <div class="col-image" style="background-image:url('/images/ai_team.png')"></div>
+    </div>
+  </section>
+
+  <!-- 7: ROADMAP -->
+  <section class="slide">
+    <div class="slide-cols">
+      <div class="col-image" style="background-image:url('/images/roadmap.png')"></div>
+      <div class="col-text">
+        <div class="terminal-tag">// ПЛАН ПОЛЁТА</div>
+        <h2 class="pip-green">Полётный<br>план</h2>
+        <p class="dim body-sm" style="margin:.4rem 0 0;font-family:'Share Tech Mono',monospace;">Стратегия: Parallel Build → Cutover</p>
+        <div class="roadmap-list">
+          <div class="roadmap-phase active">
+            <div class="phase-title amber">Phase 1 — MVP</div>
+            <div class="phase-desc">PIM + CMS + Storefront BFF → новый фронт без&nbsp;Битрикса</div>
+          </div>
+          <div class="roadmap-phase">
+            <div class="phase-title pip-green">Phase 2 — Core Commerce</div>
+            <div class="phase-desc">Cart & Checkout, Account, Reviews, Notifications</div>
+          </div>
+          <div class="roadmap-phase future">
+            <div class="phase-title">Phase 3 — Scale</div>
+            <div class="phase-desc">OMS, Loyalty, Pricing Engine, Returns</div>
+          </div>
+        </div>
+        <p class="pip-green hl-result" style="margin-top:1.2rem;">Битрикс в&nbsp;Feature Freeze.<br>Рынок не&nbsp;ждёт&nbsp;— мы&nbsp;тоже.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8: Q&A -->
+  <section class="slide">
+    <div class="slide-center">
+      <div class="terminal-tag">// КОНТАКТЫ</div>
+      <h1 class="ff-glow" style="font-size:2.5em;margin-top:1rem;">Вопросы?</h1>
+      <p style="margin-top:2rem;font-size:1.4em;">
+        <span class="amber">Илья Кадацкий</span><br>
+        <span class="dim">Директор по&nbsp;электронной коммерции, FINN&nbsp;FLARE</span>
+      </p>
+      <div class="contacts">
+        <p><span class="amber">TG:</span> <span class="pip-green">@ivkadatsky</span></p>
+      </div>
+      <p class="pip-green hl-result" style="margin-top:2rem;text-align:center;">Спасибо за&nbsp;внимание 🚀</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- Navigation -->
+<div class="nav-arrows">
+  <button class="nav-btn nav-prev hidden" aria-label="Предыдущий слайд">◀</button>
+  <div class="nav-counter"><span class="nav-counter-current">1</span> / <span class="nav-counter-total">8</span></div>
+  <button class="nav-btn nav-next" aria-label="Следующий слайд">▶</button>
+</div>
+
+<script is:inline src="/slides.js"></script>
+</body>
+</html>
