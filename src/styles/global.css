@@ -324,7 +324,7 @@ p  { line-height: 1.5; font-size: 1.3em; margin: 0; }
 }
 .arch-tier-label {
   font-family: 'Share Tech Mono', monospace;
-  font-size: .85em;
+  font-size: .95em;
   margin-bottom: .5rem;
   letter-spacing: .1em;
 }
@@ -335,11 +335,11 @@ p  { line-height: 1.5; font-size: 1.3em; margin: 0; }
   flex-wrap: wrap;
 }
 .arch-node {
-  padding: .5rem .8rem;
+  padding: .6rem 1rem;
   border: 1px solid var(--border);
   text-align: center;
   font-family: 'Share Tech Mono', monospace;
-  font-size: .85em;
+  font-size: 1.05em;
   min-width: 100px;
   transition: all .2s ease;
 }
@@ -377,9 +377,9 @@ p  { line-height: 1.5; font-size: 1.3em; margin: 0; }
   border-color: rgba(255,180,0,.2);
   background: rgba(255,180,0,.04);
 }
-.arch-node .arch-icon { font-size: 1.3em; display: block; margin-bottom: .1rem; }
-.arch-node .arch-name { font-weight: 700; font-size: 1em; display: block; }
-.arch-node .arch-desc { font-size: .7em; color: var(--dim); display: block; margin-top: .1rem; font-family: 'Rajdhani'; text-shadow: none; }
+.arch-node .arch-icon { font-size: 1.4em; display: block; margin-bottom: .1rem; }
+.arch-node .arch-name { font-weight: 700; font-size: 1.1em; display: block; }
+.arch-node .arch-desc { font-size: .85em; color: var(--dim); display: block; margin-top: .15rem; font-family: 'Rajdhani'; text-shadow: none; }
 
 .arch-connector {
   text-align: center;

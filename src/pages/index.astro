@@ -79,7 +79,7 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- 4: СТРОИМ ЗВЕЗДОЛЁТ — Юрина схема -->
+  <!-- 4: СТРОИМ ЗВЕЗДОЛЁТ — Юрина схема v2 -->
   <section class="slide">
     <div class="arch-fullslide">
       <div class="arch-header">
@@ -105,29 +105,38 @@ import '../styles/global.css';
           <span class="arch-arrow pip-green">▼ Anti-Corruption Layer ▼</span>
         </div>
 
-        <!-- Tier: Core Monolith -->
+        <!-- Tier: Core Monolith — OnlineStore -->
         <div class="arch-tier core">
-          <div class="arch-tier-label pip-green">МОДУЛЬНЫЙ МОНОЛИТ · Laravel 13 · PostgreSQL 16 · Redis · Filament</div>
+          <div class="arch-tier-label pip-green">МОДУЛЬНЫЙ МОНОЛИТ · OnlineStore · Laravel 13 · PostgreSQL 16 · Redis · Filament</div>
           <div class="arch-tier-blocks" style="gap:.4rem;">
-            <div class="arch-node core-mod"><span class="arch-name">PIM</span><span class="arch-desc">Каталог, атрибуты, медиа</span></div>
-            <div class="arch-node core-mod"><span class="arch-name">Content</span><span class="arch-desc">CMS, лендинги, баннеры</span></div>
-            <div class="arch-node core-mod"><span class="arch-name">OnlineStore</span><span class="arch-desc">Menu, Catalog, Lego, SEO, Promo</span></div>
-            <div class="arch-node core-mod"><span class="arch-name">Remains</span><span class="arch-desc">Остатки, резервы, склады</span></div>
-            <div class="arch-node core-mod"><span class="arch-name">CDP</span><span class="arch-desc">Account, сегменты, LTV</span></div>
-            <div class="arch-node core-mod"><span class="arch-name">Order</span><span class="arch-desc">Заказы, статусы, возвраты</span></div>
-            <div class="arch-node core-mod"><span class="arch-name">Payment</span><span class="arch-desc">Оплата, рассрочка</span></div>
-            <div class="arch-node core-mod"><span class="arch-name">Geography</span><span class="arch-desc">Города, магазины, ПВЗ</span></div>
-            <div class="arch-node core-mod"><span class="arch-name">ClientRelated</span><span class="arch-desc">Отзывы, избранное</span></div>
+            <div class="arch-node core-mod"><span class="arch-name">Menu</span></div>
+            <div class="arch-node core-mod"><span class="arch-name">Catalog</span></div>
+            <div class="arch-node core-mod"><span class="arch-name">Lego</span></div>
+            <div class="arch-node core-mod"><span class="arch-name">Promotions</span></div>
+            <div class="arch-node core-mod"><span class="arch-name">SEO</span></div>
+            <div class="arch-node core-mod"><span class="arch-name">Gifts</span></div>
           </div>
         </div>
 
-        <!-- Satellites -->
+        <div class="arch-connector">
+          <span class="arch-arrow amber">▼ API Gateway ▼</span>
+        </div>
+
+        <!-- Tier: Satellites -->
         <div class="arch-tier-sat">
+          <div class="arch-tier-label amber" style="margin-bottom:.4rem;">СЕРВИСЫ-САТЕЛЛИТЫ · API Gateway</div>
           <div class="arch-tier-blocks">
-            <div class="arch-node sat-mod"><span class="arch-name">🛒 Cart & Checkout</span><span class="arch-desc">Сателлит · корзина, checkout</span></div>
-            <div class="arch-node sat-mod"><span class="arch-name">🔐 IDP</span><span class="arch-desc">Сателлит · SberID, OTP, JWT</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">PIM</span><span class="arch-desc">Каталог, атрибуты, медиа</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">Content</span><span class="arch-desc">CMS, лендинги, баннеры</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">Remains</span><span class="arch-desc">Остатки, резервы</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">CDP</span><span class="arch-desc">Account, сегменты</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">Order</span><span class="arch-desc">Заказы, возвраты</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">Payment</span><span class="arch-desc">Оплата, рассрочка</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">Geography</span><span class="arch-desc">Города, ПВЗ</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">ClientRelated</span><span class="arch-desc">Отзывы, избранное</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">Cart & Checkout</span><span class="arch-desc">Корзина, checkout</span></div>
+            <div class="arch-node sat-mod"><span class="arch-name">IDP</span><span class="arch-desc">SberID, OTP, JWT</span></div>
           </div>
-          <div class="arch-tier-label amber" style="text-align:center;margin-top:.3rem;">Сервисы-сателлиты · Docker Network API</div>
         </div>
 
         <div class="arch-connector">
@@ -138,9 +147,9 @@ import '../styles/global.css';
         <div class="arch-tier">
           <div class="arch-tier-label amber">КЛИЕНТЫ</div>
           <div class="arch-tier-blocks">
-            <div class="arch-node front"><span class="arch-name">Storefront</span><span class="arch-desc">Nuxt 3 SSR + Tailwind</span></div>
+            <div class="arch-node front"><span class="arch-name">Storefront</span><span class="arch-desc">Nuxt 3 SSR</span></div>
             <div class="arch-node front"><span class="arch-name">Mobile App</span><span class="arch-desc">iOS / Android</span></div>
-            <div class="arch-node front"><span class="arch-name">Консультант</span><span class="arch-desc">App для розницы</span></div>
+            <div class="arch-node front"><span class="arch-name">Консультант</span><span class="arch-desc">App розницы</span></div>
           </div>
         </div>
       </div>
