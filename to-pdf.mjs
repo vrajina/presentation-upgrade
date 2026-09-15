@@ -6,11 +6,12 @@ import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const TOTAL_SLIDES = 9;
+const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8'));
+const OUTPUT = path.join(__dirname, `${pkg.presentationName || pkg.name || 'presentation'}.pdf`);
+
 const WIDTH = 1920;
 const HEIGHT = 1080;
 const PORT = 4195;
-const OUTPUT = path.join(__dirname, 'presentation.pdf');
 
 async function waitForServer(url, maxWait = 30000) {
   const start = Date.now();
@@ -65,8 +66,15 @@ async function main() {
   // 4. Open presentation
   console.log('📂 Loading presentation...');
   await page.goto(`http://127.0.0.1:${PORT}/`, { waitUntil: 'networkidle0', timeout: 60000 });
-  // Wait for fonts and images
   await new Promise(r => setTimeout(r, 4000));
+
+  // Determine slide count dynamically
+  const TOTAL_SLIDES = await page.evaluate(() => document.querySelectorAll('.slide').length);
+  console.log(`📊 Found ${TOTAL_SLIDES} slides.`);
+
+  if (TOTAL_SLIDES === 0) {
+    throw new Error('No slides found! Ensure slides have the ".slide" class.');
+  }
 
   // 5. Screenshot each slide
   const screenshots = [];
@@ -76,15 +84,12 @@ async function main() {
       const track = document.querySelector('.slides-track');
       track.style.transition = 'none';
       track.style.transform = `translateX(-${idx * 100}vw)`;
-      // Update counter — must match current slide
       const cur = document.querySelector('.nav-counter-current');
       if (cur) cur.textContent = idx + 1;
       const tot = document.querySelector('.nav-counter-total');
       if (tot) tot.textContent = total;
-      // Update progress bar
       const bar = document.querySelector('.nav-progress');
       if (bar) bar.style.width = `${((idx + 1) / total) * 100}%`;
-      // Update nav buttons visibility
       const prev = document.querySelector('.nav-prev');
       const next = document.querySelector('.nav-next');
       if (prev) prev.classList.toggle('hidden', idx === 0);

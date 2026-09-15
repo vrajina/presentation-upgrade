@@ -1,0 +1,35 @@
+---
+import '../styles/theme.css';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+</head>
+<body>
+<div class="scanlines"></div>
+<div class="nav-progress"></div>
+
+<div class="slides-track">
+  <slot />
+</div>
+
+<!-- Navigation -->
+<div class="nav-arrows">
+  <button class="nav-btn nav-prev hidden" aria-label="Предыдущий слайд">◀</button>
+  <div class="nav-counter"><span class="nav-counter-current">1</span> / <span class="nav-counter-total">?</span></div>
+  <button class="nav-btn nav-next" aria-label="Следующий слайд">▶</button>
+</div>
+
+<script is:inline src="/slides.js"></script>
+</body>
+</html>
