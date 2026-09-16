@@ -1,20 +1,48 @@
-﻿<section class="slide" style="position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 100%; background: #000;">
-  <!-- Left side (Legacy Robot) -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/slide3_legacy.jpg'); background-size: cover; background-position: 15% center; clip-path: polygon(0 0, 50% 0, 35% 100%, 0% 100%);"></div>
+﻿<section class="slide" style="background-color: #080c11; padding: 2rem 4rem; display: flex; flex-direction: column; justify-content: center; height: 100%; position: relative;">
   
-  <!-- Right side (AI Ninjas) -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/slide4_aininja.jpg'); background-size: cover; background-position: 85% center; clip-path: polygon(50% 0, 100% 0, 100% 100%, 35% 100%);"></div>
-
-  <!-- The dividing diagonal line -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));">
-    <svg width="100%" height="100%" preserveAspectRatio="none">
-      <line x1="50%" y1="0" x2="35%" y2="100%" stroke="var(--amber)" stroke-width="12" />
-    </svg>
+  <!-- Top Title -->
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h1 style="color: #ff6b00; font-size: 6em; font-family: var(--font-accent); text-shadow: 4px 4px 0 #8b0000; letter-spacing: 2px; margin: 0;">RETAIL KOMBAT</h1>
   </div>
   
-  <!-- Center Text Overlay -->
-  <div style="position: relative; z-index: 10; background: rgba(0,0,0,0.85); padding: 3rem 5rem; border: 4px solid var(--amber); text-align: center; box-shadow: 0 0 40px rgba(0,0,0,1);">
-    <h1 style="color: var(--amber); font-size: 7em; font-family: var(--font-accent); text-shadow: 4px 4px 0px var(--pip-green); margin-bottom: 0.5rem; line-height: 1;">RETAIL KOMBAT</h1>
-    <h2 style="color: white; font-size: 3em; font-family: var(--font-accent); letter-spacing: 2px;">ИИ vs Легаси. <span style="color: var(--pip-green);">FIGHT!</span></h2>
+  <!-- VS Container -->
+  <div style="display: flex; justify-content: space-between; align-items: stretch; height: 60vh; position: relative;">
+    
+    <!-- Player 1 -->
+    <div style="width: 40%; display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem;">
+        <h2 style="color: #b0c4de; font-size: 2.5em; font-family: var(--font-accent); text-shadow: 3px 3px 0 #000; margin: 0; line-height: 1;">СТАРЫЙ ДОБРЫЙ<br>ЛЕГАСИ</h2>
+        <div style="text-align: right; padding-bottom: 5px;">
+          <div style="color: #4db8ff; font-size: 1.5em; font-family: var(--font-accent); margin-bottom: 5px;">P1</div>
+          <div style="width: 150px; height: 20px; background: #222; border: 3px solid #555;">
+            <div style="width: 100%; height: 100%; background: #4db8ff;"></div>
+          </div>
+        </div>
+      </div>
+      <div style="flex-grow: 1; border: 6px solid #b0c4de; background-image: url('/slide3_legacy.jpg'); background-size: cover; background-position: top center; box-shadow: 0 0 20px rgba(77,184,255,0.2);"></div>
+      <div style="text-align: center; margin-top: 1rem; color: #b0c4de; font-size: 1.8em; font-family: var(--font-accent);">BITRIX MONOLITH</div>
+    </div>
+
+    <!-- Center VS & FIGHT -->
+    <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10; text-align: center; width: 30%;">
+      <div style="color: white; font-size: 2.5em; font-family: var(--font-accent); margin-bottom: 1rem; text-shadow: 2px 2px 0 black;">VS</div>
+      <h1 style="color: #ff0000; font-size: 5.5em; font-family: var(--font-accent); text-shadow: 5px 5px 0 #550000, -2px -2px 0 #fff; line-height: 1.1; transform: rotate(-5deg); margin: 0;">AI VS<br>LEGACY.<br>FIGHT!</h1>
+    </div>
+
+    <!-- Player 2 -->
+    <div style="width: 40%; display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem;">
+        <div style="padding-bottom: 5px;">
+          <div style="color: #ff3333; font-size: 1.5em; font-family: var(--font-accent); margin-bottom: 5px;">P2</div>
+          <div style="width: 150px; height: 20px; background: #222; border: 3px solid #555;">
+            <div style="width: 100%; height: 100%; background: #ff3333;"></div>
+          </div>
+        </div>
+        <h2 style="color: #00ffff; font-size: 3em; font-family: var(--font-accent); text-shadow: 3px 3px 0 #000; margin: 0;">AI NINJA</h2>
+      </div>
+      <div style="flex-grow: 1; border: 6px solid #00ffff; background-image: url('/slide4_aininja.jpg'); background-size: cover; background-position: top center; box-shadow: 0 0 20px rgba(255,0,0,0.2);"></div>
+      <div style="text-align: center; margin-top: 1rem; color: #00ffff; font-size: 1.8em; font-family: var(--font-accent);">CYBER ELITE SQUAD</div>
+    </div>
+
   </div>
 </section>
