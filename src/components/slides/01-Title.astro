@@ -1,1 +1,20 @@
-﻿<section class="slide" style="background-image: url('/retail_kombat_title.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></section>
+﻿<section class="slide" style="position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 100%; background: #000;">
+  <!-- Left side (Legacy Robot) -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/slide3_legacy.jpg'); background-size: cover; background-position: 15% center; clip-path: polygon(0 0, 50% 0, 35% 100%, 0% 100%);"></div>
+  
+  <!-- Right side (AI Ninjas) -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/slide4_aininja.jpg'); background-size: cover; background-position: 85% center; clip-path: polygon(50% 0, 100% 0, 100% 100%, 35% 100%);"></div>
+
+  <!-- The dividing diagonal line -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));">
+    <svg width="100%" height="100%" preserveAspectRatio="none">
+      <line x1="50%" y1="0" x2="35%" y2="100%" stroke="var(--amber)" stroke-width="12" />
+    </svg>
+  </div>
+  
+  <!-- Center Text Overlay -->
+  <div style="position: relative; z-index: 10; background: rgba(0,0,0,0.85); padding: 3rem 5rem; border: 4px solid var(--amber); text-align: center; box-shadow: 0 0 40px rgba(0,0,0,1);">
+    <h1 style="color: var(--amber); font-size: 7em; font-family: var(--font-accent); text-shadow: 4px 4px 0px var(--pip-green); margin-bottom: 0.5rem; line-height: 1;">RETAIL KOMBAT</h1>
+    <h2 style="color: white; font-size: 3em; font-family: var(--font-accent); letter-spacing: 2px;">ИИ vs Легаси. <span style="color: var(--pip-green);">FIGHT!</span></h2>
+  </div>
+</section>
